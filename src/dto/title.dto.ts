@@ -1,4 +1,3 @@
-import { Title } from "../interfaces/title.interface";
 
 export class TitleDto {
   emp_no: number;

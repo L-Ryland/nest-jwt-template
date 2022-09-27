@@ -24,13 +24,16 @@ export class TitleController {
 
   @Get()
   @UsePipes(new ValidationPipe({transform: true}))
-  async getTitle(@Query() queryTitleDto?: QueryTitleDto) {
+  async getAllTitles(@Query() queryTitleDto?: QueryTitleDto) {
     // console.log(this.knexService.knex);
     console.log(queryTitleDto, 'queryTitleDto');
     const {limit, offset, order, pagination, ...titleEntity} = queryTitleDto;
     const queryChain = this.knex(titlePrefix).where(titleEntity);
     if (order) queryChain.orderBy(order);
     const newOffset = pagination ? (Number(pagination) + 1) * limit : offset;
+    const [record] = await this.knex(titlePrefix).countDistinct("emp_no").where(titleEntity);
+    const [count] = Object.values(record);
+    if (Number(count) > offset) queryChain.limit(limit).offset(newOffset);
     return queryChain.limit(limit).offset(newOffset);
   }
 

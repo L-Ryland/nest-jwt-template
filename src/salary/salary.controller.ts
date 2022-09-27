@@ -1,7 +1,21 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query, UsePipes, ValidationPipe } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  Query,
+  UseGuards,
+  UsePipes,
+  ValidationPipe
+} from "@nestjs/common";
 import { Knex } from "knex";
 import { KnexService } from "../knex/knex.service";
 import { QuerySalaryDto, SalaryDto } from "../dto/salary.dto";
+import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { Roles } from "../role/role.decorator";
 
 const salaryPrefix = "salaries";
 
@@ -13,7 +27,9 @@ export class SalaryController {
     this.knex = knexService.knex;
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get()
+  @Roles("SUPER_ADMIN_REALM")
   @UsePipes(new ValidationPipe({ transform: true }))
   async getAllSalaries(@Query() querySalaryDto?: QuerySalaryDto) {
     const { limit, offset, order, pagination, ...salaryEntity } = querySalaryDto;

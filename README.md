@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+And some silly CRUD using MySql example database. 
+
+Add JWT authentication test with different roles. 
+
 ## Installation
 
 ```bash

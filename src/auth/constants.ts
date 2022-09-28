@@ -2,32 +2,32 @@ export const jwtConstants = {
   secret: "<#,)sS$*zJ/f6Yp-PEY\"Q_VX\"N_F=NtX=!^VbP(duuVs_Zf:b!/<Y:#9CH,z+:Xa"
 };
 export const realms = {
-  CUSTOMER_REALM: ["customer"],
+  CustomerRealm: ["customer"],
 
-  SUPER_ADMIN_REALM: ["super-admin"],
+  SuperAdminRealm: ["super-admin"],
 
-  ADMIN_REALM: ["super-admin", "admin"],
+  AdminRealm: ["super-admin", "admin"],
 
-  PRODUCT_MANAGER_REALM: ["super-admin", "admin", "product-manager"],
-  FINANCE_ONLY_REALM: ["super-admin", "admin", "finance"],
+  ProductManagerRealm: ["super-admin", "admin", "product-manager"],
+  FinanceOnlyRealm: ["super-admin", "admin", "finance"],
 
-  FINANCE_LIMITED_REALM: ["super-admin", "admin", "product-manager", "finance"],
-  CUSTOMER_HERO_REALM: ["super-admin", "admin", "product-manager", "customer-hero"],
-  MANAGERS_REALM: ["super-admin", "admin", "product-manager", "community-manager"],
+  FinanceLimitedRealm: ["super-admin", "admin", "product-manager", "finance"],
+  CustomerHeroRealm: ["super-admin", "admin", "product-manager", "customer-hero"],
+  ManagerRealm: ["super-admin", "admin", "product-manager", "community-manager"],
 
-  FINANCE_LOGISTIC_REALM: ["super-admin", "admin", "product-manager", "logistic", "finance"],
-  LOGISTIC_REALM: ["super-admin", "admin", "product-manager", "community-manager", "logistic"],
-  FINANCE_MANAGERS_REALM: ["super-admin", "admin", "product-manager", "community-manager", "finance"],
-  FINANCE_LARGE_REALM: ["super-admin", "admin", "product-manager", "community-manager", "finance"],
-  DESIGN_MANAGER_REALM: ["super-admin", "admin", "product-manager", "community-manager", "designer"],
-  CUSTOMER_FACING_REALM: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero"],
+  FinanceLogisticRealm: ["super-admin", "admin", "product-manager", "logistic", "finance"],
+  LogisticRealm: ["super-admin", "admin", "product-manager", "community-manager", "logistic"],
+  FinanceManagersRealm: ["super-admin", "admin", "product-manager", "community-manager", "finance"],
+  FinanceLargeRealm: ["super-admin", "admin", "product-manager", "community-manager", "finance"],
+  DesignManagerRealm: ["super-admin", "admin", "product-manager", "community-manager", "designer"],
+  CustomerFacingRealm: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero"],
 
-  NO_FINANCE_HERO_REALM: ["super-admin", "admin", "product-manager", "community-manager", "designer", "logistic"],
-  NO_FINANCE_DESIGNER_REALM: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "logistic"],
-  NO_DESIGNER_LOGISTIC_REALM: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "finance"],
-  FINANCE_LOGISTIC_LARGE_REALM: ["super-admin", "admin", "product-manager", "community-manager", "logistic", "finance"],
+  NoFinanceHeroRealm: ["super-admin", "admin", "product-manager", "community-manager", "designer", "logistic"],
+  NoFinanceDesignerRealm: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "logistic"],
+  NoDesignerLogisticRealm: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "finance"],
+  FinanceLogisticLargeRealm: ["super-admin", "admin", "product-manager", "community-manager", "logistic", "finance"],
 
-  NO_DESIGNER_REALM: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "logistic", "finance"],
+  NoDesignerRealm: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "logistic", "finance"],
 
-  ALL_REALM: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "designer", "logistic", "finance", "customer"]
+  AllRealm: ["super-admin", "admin", "product-manager", "community-manager", "customer-hero", "designer", "logistic", "finance", "customer"]
 };

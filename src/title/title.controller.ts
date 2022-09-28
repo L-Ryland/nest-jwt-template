@@ -13,8 +13,10 @@ import {
 import { KnexService } from "../knex/knex.service";
 import { Knex } from "knex";
 import { QueryTitleDto, TitleDto } from "../dto/title.dto";
+import { Roles } from "../role/role.decorator";
 
 const titlePrefix = "titles";
+@Roles("SuperAdminRealm")
 @Controller(titlePrefix)
 export class TitleController {
   knex: Knex;

@@ -29,7 +29,7 @@ export class SalaryController {
 
   @UseGuards(JwtAuthGuard)
   @Get()
-  @Roles("SUPER_ADMIN_REALM")
+  @Roles("SuperAdminRealm")
   @UsePipes(new ValidationPipe({ transform: true }))
   async getAllSalaries(@Query() querySalaryDto?: QuerySalaryDto) {
     const { limit, offset, order, pagination, ...salaryEntity } = querySalaryDto;
